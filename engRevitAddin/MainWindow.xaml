@@ -1,0 +1,41 @@
+﻿<Window x:Class="engRevitAddin.MainWindow"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:engRevitAddin"
+             mc:Ignorable="d" Title="Parameter Scanner"  WindowStyle="SingleBorderWindow" Height="379" Width="597" >
+    <StackPanel Margin="0,22,0,0" RenderTransformOrigin="0.494,0.479">
+        <Image Source="/engRevitAddin;component/img/icon.png" Height="80" Grid.Row="1" HorizontalAlignment="Center" Margin="0,10,0,40"/>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="400" Height="44">
+            <Label FontSize="24" Width="200
+                   " >Parameter Name</Label>
+            <TextBox VerticalAlignment="Center" Width="200" Name="txtParameterName"
+                     Text="{Binding ParameterName, 
+                            ValidatesOnExceptions=True,
+                            UpdateSourceTrigger=PropertyChanged}"
+                     FontSize="24"></TextBox>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="400" Height="44">
+            <Label FontSize="24" Width="200
+                   " >Parameter Value</Label>
+            <TextBox VerticalAlignment="Center" Width="200" FontSize="24" Name="txtParameterValue"
+                     Text="{Binding ParameterValue, 
+                            ValidatesOnExceptions=True,
+                            UpdateSourceTrigger=PropertyChanged}"></TextBox>
+        </StackPanel>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Button Content="Isolate In View" FontSize="30" FontFamily="bold" Grid.Row="1" Margin="20" Background="Green" Foreground="White" Click="IsolateCommand" />
+            <Button Content="Select" FontSize="30" FontFamily="bold" Grid.Row="1" Grid.Column="1" Margin="20" Background="Blue" Foreground="White" Click="SelectCommand" />
+        </Grid>
+    </StackPanel>
+</Window>

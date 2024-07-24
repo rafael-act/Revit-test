@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<RevitAddIns>
+	<AddIn Type="Application">
+		<Name>TestApps</Name>
+		<Assembly>engRevitAddin.dll</Assembly>
+		<AddInId>EC4DC5BF-6885-4757-974B-6FC77A327B7A</AddInId>
+		<FullClassName>engRevitAddin.App</FullClassName>
+		<Text>Parameters</Text>
+		<Description>Eng Test</Description>
+		<VendorId>Rafael Castro</VendorId>
+		<VendorDescription>Rafael Castro AddIn</VendorDescription>
+		<VisibilityMode>AlwaysVisible</VisibilityMode>
+	</AddIn>
+</RevitAddIns>
